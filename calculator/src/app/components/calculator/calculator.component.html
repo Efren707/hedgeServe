@@ -1,43 +1,43 @@
 <div class="container">
 
     <div class="result">
-        <h1>{{result}}</h1>
+        <h1>{{currentEq === "" ? result : currentEq}}</h1>
     </div>
 
     <div class="keypad">
     
         <div class="keypad-rows">
-            <button class="keypad-btn">C</button>
-            <button class="keypad-btn">+/-</button>
-            <button class="keypad-btn">%</button>
-            <button class="keypad-btn org-btn">/</button>
+            <button class="keypad-btn" (click)="clear()">C</button>
+            <button class="keypad-btn" (click)="backup()">&larr;</button>
+            <button class="keypad-btn" (click)="valueChange()">+/-</button>
+            <button class="keypad-btn org-btn" (click)="operationPress('/')">/</button>
         </div>
 
         <div class="keypad-rows">
-            <button class="keypad-btn">7</button>
-            <button class="keypad-btn">8</button>
-            <button class="keypad-btn">9</button>
-            <button class="keypad-btn org-btn">X</button>
+            <button class="keypad-btn" (click)="numberPress('7')">7</button>
+            <button class="keypad-btn" (click)="numberPress('8')">8</button>
+            <button class="keypad-btn" (click)="numberPress('9')">9</button>
+            <button class="keypad-btn org-btn" (click)="operationPress('*')">X</button>
         </div>
 
         <div class="keypad-rows">
-            <button class="keypad-btn">4</button>
-            <button class="keypad-btn">5</button>
-            <button class="keypad-btn">6</button>
-            <button class="keypad-btn org-btn">-</button>
+            <button class="keypad-btn" (click)="numberPress('4')">4</button>
+            <button class="keypad-btn" (click)="numberPress('5')">5</button>
+            <button class="keypad-btn" (click)="numberPress('6')">6</button>
+            <button class="keypad-btn org-btn" (click)="operationPress('-')">-</button>
         </div>
         
         <div class="keypad-rows">
-            <button class="keypad-btn">1</button>
-            <button class="keypad-btn">2</button>
-            <button class="keypad-btn">3</button>
-            <button class="keypad-btn org-btn">+</button>
+            <button class="keypad-btn" (click)="numberPress('1')">1</button>
+            <button class="keypad-btn" (click)="numberPress('2')">2</button>
+            <button class="keypad-btn" (click)="numberPress('3')">3</button>
+            <button class="keypad-btn org-btn" (click)="operationPress('+')">+</button>
         </div>
 
         <div class="keypad-rows">
-            <button class="keypad-btn dbl-btn">0</button>
-            <button class="keypad-btn">.</button>
-            <button class="keypad-btn org-btn">=</button>
+            <button class="keypad-btn dbl-btn" (click)="numberPress('0')">0</button>
+            <button class="keypad-btn" (click)="numberPress('.')">.</button>
+            <button class="keypad-btn org-btn" (click)="solveEq()">=</button>
         </div>
         
     </div>
