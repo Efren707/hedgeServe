@@ -1,0 +1,58 @@
+.container {
+    width: 50vw;
+    height: 80vh;
+    border: 5px solid black;
+}
+
+.result {
+    width: 100%;
+    height: 20%;
+    font-size: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    background-color: black;
+    color: white;
+}
+
+.keypad {
+    width: 100%;
+    height: 80.05%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keypad-rows {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keypad-btn {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 25px;
+    background-color: #757575;
+}
+
+.keypad-btn:hover {
+    filter: brightness(85%);
+}
+
+.dbl-btn {
+    width: 50%;
+}
+
+.org-btn {
+    background-color: #ff7300;
+}
